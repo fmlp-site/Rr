@@ -5,11 +5,12 @@
  */
 package br.unipampa.sgc.apresentacao;
 
+        
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author root
+ * @author giovane mendonca
  */
 public class JanelaCriarCronograma extends javax.swing.JFrame {
 
@@ -63,6 +64,11 @@ public class JanelaCriarCronograma extends javax.swing.JFrame {
         });
 
         jRemover.setText("Remover");
+        jRemover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRemoverActionPerformed(evt);
+            }
+        });
 
         jtTabelaCronograma.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,6 +181,11 @@ public class JanelaCriarCronograma extends javax.swing.JFrame {
                              //do mouse no campo nome
         
     }//GEN-LAST:event_jAdicionarActionPerformed
+
+    private void jRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRemoverActionPerformed
+        // remove dados da tabela
+         ((DefaultTableModel) jtTabelaCronograma.getModel()).removeRow(jtTabelaCronograma.getSelectedRow());
+    }//GEN-LAST:event_jRemoverActionPerformed
 
     /**
      * @param args the command line arguments

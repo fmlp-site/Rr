@@ -5,51 +5,81 @@
  */
 package br.unipampa.sgc.modelo;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.util.Date;
 
 /**
  * Cronograma de concurso
+ * 
  */
 public class Cronograma {
     
-    private String atividade;
-    private String data_Cron;
-    private int horario;
-    private String local;
+            private String atividade;
+            private String data;
+            private int horario;
+            private String local;
+               
+
+    public static final String PROP_ATIVIDADE = "atividade";
     
-    public Cronograma(String atividade, String data_Cron, 
-            int horario, String local){
-     this.atividade = atividade;
-     this.data_Cron = data_Cron;
-     this.horario = horario;
-     this.local = local;
+    public String getAtividade() {
+        return atividade;
     }
-    
-    public String getAtividade(){
-        return atividade;        
-    }
-    
-    public void setAtividade(String atividade){
+
+    public void setAtividade(String atividade) {
+        String oldAtividade = this.atividade; // salva o valor antigo
         this.atividade = atividade;
+        //Dispara evento avisando que houve mudança no campo atividade
+        propertyChangeSupport.firePropertyChange(PROP_ATIVIDADE, oldAtividade, atividade);
     }
-    
-    public String getDataCron(){
-        return data_Cron;
+
+
+    public static final String PROP_DATA = "data";
+
+    public String getData() {
+        return data;
     }
+
+    public void setData(String data) {
+        String oldData = this.data;
+        this.data = data;
+        propertyChangeSupport.firePropertyChange(PROP_DATA, oldData, data);
+    }
+
+
+    public static final String PROP_HORARIO = "horario";
     
-    public int getHorario(){
+    public int getHorario() {
         return horario;
     }
-    
-    public void setHorario(int horario){
+
+    public void setHorario(int horario) {
+        int oldHorario = this.horario;
         this.horario = horario;
-        }
+        propertyChangeSupport.firePropertyChange(PROP_HORARIO, oldHorario, horario);
+    }      
     
-    public String getLocal(){
+    public static final String PROP_LOCAL = "local";
+
+    public String getLocal() {
         return local;
     }
-    
-    public void setLocal(String local){
+
+    public void setLocal(String local) {
+        String oldLocal = this.local;
         this.local = local;
-    }     
+        propertyChangeSupport.firePropertyChange(PROP_LOCAL, oldLocal, local);
+    }
+
+    private transient final PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        propertyChangeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        propertyChangeSupport.removePropertyChangeListener(listener);
+    }
+
 }

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da9b7232-fcfc-4842-a784-7b3ebf095cec">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="15"/>
+	<parameter name="relatorios" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * FROM Concurso, Examinador]]>
+	</queryString>
+	<field name="idConcurso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ministerio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="universidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="campus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="area" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edital" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="classe" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cabecalho" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Regras_idRegras" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ClasseDoConcurso_idClasseDoConcurso" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Banca_idBanca" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idExaminador" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="categoria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<image>
+				<reportElement x="11" y="0" width="123" height="100" uuid="f6cb2d17-e30b-4d19-8911-b875c357dc53"/>
+				<imageExpression><![CDATA["/home/geovane/Dropbox/Engenharia de Software/6º - Semestre/EvoluçãoDeSoftware/Trabalho_Final/DocumentosGerados_GCP/LogoUnipampa.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="146" y="0" width="246" height="20" uuid="2729fcc7-f04b-4415-b168-a9e869b49786"/>
+				<text><![CDATA[MINISTÉRIO DA EDUCAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="20" width="272" height="20" uuid="1c77c8dc-53e2-4332-b076-628eb4b2e852"/>
+				<text><![CDATA[FUNDAÇÃO UNIVERSIDADE FEDERAL DO PAMPA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="40" width="54" height="20" uuid="245adcbc-5e07-439e-9cc2-3cfb89ebcb4e"/>
+				<text><![CDATA[CAMPUS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="60" width="399" height="20" uuid="2f3f7ee2-8a33-401a-8102-deedb0218da0"/>
+				<text><![CDATA[CONCURSO PÚBLICO PARA PROFESSOR DO MAGISTÉRIO SUPERIOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="80" width="54" height="20" uuid="26899e25-40aa-47e8-add1-ce8ba49da20b"/>
+				<text><![CDATA[ÁREA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="40" width="100" height="20" uuid="2f4926d3-225a-4b87-95b7-883691610d4a"/>
+				<textFieldExpression><![CDATA[$F{campus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="80" width="100" height="20" uuid="c864b7ea-307d-402b-acf3-9fd5f2ba4391"/>
+				<textFieldExpression><![CDATA[$F{area}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="0" width="47" height="20" uuid="438098f9-7f90-499c-a240-3c54d3d86fba"/>
+				<text><![CDATA[Folha nº:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="20" width="43" height="20" uuid="b0950ba1-dd7c-459d-9450-dc40561c1324"/>
+				<text><![CDATA[Rúbrica:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="15" width="44" height="20" uuid="4605162f-b47b-411b-a0dd-cc1e807eb4bf"/>
+				<text><![CDATA[Ata nrº]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="15" width="270" height="20" uuid="249d0b5f-64a4-44bb-b10c-7ad3b672278b"/>
+				<text><![CDATA[Recepção dos candidatos e entrega de documentos ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="12" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="21" height="20" uuid="0c97bceb-bae2-4b8c-8ea9-6ce927b9b128"/>
+				<text><![CDATA[Aos]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="55" y="0" width="100" height="20" uuid="f4284647-538a-4dad-8ae1-b454292eaf93"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="0" width="18" height="20" uuid="778dd8c0-20f6-47b8-9cdb-64fdbb7d0a32"/>
+				<text><![CDATA[, à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="0" width="14" height="20" uuid="e6a90303-71c0-4997-85f9-cf75eca96ae5"/>
+				<text><![CDATA[na]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="0" width="100" height="20" uuid="d8813fec-5292-4d04-a330-23ca17226813"/>
+				<text><![CDATA[sala 101]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="77" height="20" uuid="2a7dd0bc-585b-4598-b152-3c98a9f89247"/>
+				<text><![CDATA[INSERIR HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="0" width="193" height="20" uuid="a2c1aa77-0b35-4af1-bca6-efdad31f2616"/>
+				<text><![CDATA[reuniu-se a Comissão Examinadora ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="380" height="20" uuid="9e09d305-1763-4fb9-ba84-ec263ab6f0f5"/>
+				<text><![CDATA[do Concurso Público para Professor do Magistério Superior para o campus ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="20" width="100" height="20" uuid="e4028e85-eea2-4db0-8908-7148ac0c7fa4"/>
+				<text><![CDATA["INSERIR CAMPUS"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="1d13076e-bc3b-449b-82c2-c8a5c0d26c97"/>
+				<text><![CDATA[na área de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="40" width="100" height="20" uuid="81976348-8f5f-424f-b195-adb2bc9d002c"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="555" height="65" uuid="4cc05ed0-168a-44ab-bdc0-2b26450f0267"/>
+				<text><![CDATA[para a sessão de recepção aos candidatos inscritos no referido Concurso Público. Inicialmente, foi realizada a identificação dos candidatos presentes conforme lista de presença em anexo. A seguir, foi exposto o cronograma do Concurso Público e detalhes sobre os procedimentos. Em seguida, os candidatos procederam a entrega da documentação comprobatória do seu Curriculum Vitae e as três cópias do Projeto de Memorial Acadêmico. A entrega dos documentos foi feita contra recibo assinado pelo presidente da Comissão Examinadora. Cópias de documentos não autenticadas em cartório foram autenticadas pela Comissão Examinadora na presença dos originais. Nada mais havendo a tratar, lavrou-se a presente ata.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="40" width="100" height="20" uuid="88a5041e-d433-439c-be55-7513c68f2b72"/>
+				<textFieldExpression><![CDATA[$F{area}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="25" width="100" height="20" uuid="174c2593-6600-4c84-8eda-4923b18acf4f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

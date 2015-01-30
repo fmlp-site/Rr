@@ -5,6 +5,7 @@
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
             <name>Sistema Gerenciador de Concurso</name>
             <source-roots>
+                <root id="src.relatorios.dir" name="Relatorios"/>
                 <root id="src.dir"/>
             </source-roots>
             <test-roots>

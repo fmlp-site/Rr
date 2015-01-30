@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<queryString>
+		<![CDATA[SELECT
+     Concurso.`idConcurso` AS Concurso_idConcurso,
+     Concurso.`ministerio` AS Concurso_ministerio,
+     Concurso.`universidade` AS Concurso_universidade,
+     Concurso.`campus` AS Concurso_campus,
+     Concurso.`area` AS Concurso_area,
+     Concurso.`data` AS Concurso_data,
+     Concurso.`edital` AS Concurso_edital,
+     Concurso.`classe` AS Concurso_classe,
+     Concurso.`cabecalho` AS Concurso_cabecalho,
+     Concurso.`Regras_idRegras` AS Concurso_Regras_idRegras,
+     Concurso.`ClasseDoConcurso_idClasseDoConcurso` AS Concurso_ClasseDoConcurso_idClasseDoConcurso,
+     Concurso.`Banca_idBanca` AS Concurso_Banca_idBanca,
+     Criterio.`idCriterio` AS Criterio_idCriterio,
+     Criterio.`nomeCriterio` AS Criterio_nomeCriterio,
+     Criterio.`notaCriterio` AS Criterio_notaCriterio,
+     Criterio.`Prova_Didatica_idProva_Didatica` AS Criterio_Prova_Didatica_idProva_Didatica,
+     Criterio.`Prova_Escrita_idProva_Escrita` AS Criterio_Prova_Escrita_idProva_Escrita
+FROM
+     `Concurso` Concurso,
+     `Criterio` Criterio]]>
+	</queryString>
+	<field name="Concurso_idConcurso" class="java.lang.String"/>
+	<field name="Concurso_ministerio" class="java.lang.String"/>
+	<field name="Concurso_universidade" class="java.lang.String"/>
+	<field name="Concurso_campus" class="java.lang.String"/>
+	<field name="Concurso_area" class="java.lang.String"/>
+	<field name="Concurso_data" class="java.lang.String"/>
+	<field name="Concurso_edital" class="java.lang.String"/>
+	<field name="Concurso_classe" class="java.lang.String"/>
+	<field name="Concurso_cabecalho" class="java.lang.String"/>
+	<field name="Concurso_Regras_idRegras" class="java.lang.Integer"/>
+	<field name="Concurso_ClasseDoConcurso_idClasseDoConcurso" class="java.lang.Integer"/>
+	<field name="Concurso_Banca_idBanca" class="java.lang.Integer"/>
+	<field name="Criterio_idCriterio" class="java.lang.Integer"/>
+	<field name="Criterio_nomeCriterio" class="java.lang.String"/>
+	<field name="Criterio_notaCriterio" class="java.lang.Integer"/>
+	<field name="Criterio_Prova_Didatica_idProva_Didatica" class="java.lang.Integer"/>
+	<field name="Criterio_Prova_Escrita_idProva_Escrita" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="166" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="10" width="277" height="20"/>
+				<textElement/>
+				<text><![CDATA[AVALIAÇÃO INDIVIDUAL DA PROVA ESCRITA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="78" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Universidade:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Campus:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="118" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Área:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="138" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Edital:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="58" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Ministério:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="58" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Concurso_ministerio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="78" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Concurso_universidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="98" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Concurso_campus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="118" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Concurso_area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="138" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Concurso_edital}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[CANDIDATO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[EXAMINADOR:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="213" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="174" y="73" width="270" height="140"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="138">
+						<jr:tableHeader style="table 1_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="13" y="0" width="50" height="30"/>
+								<textElement/>
+								<text><![CDATA[Critério	]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableHeader style="table 1_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="27" y="0" width="41" height="30"/>
+								<textElement/>
+								<text><![CDATA[Peso]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableHeader style="table 1_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="21" y="0" width="41" height="30"/>
+								<textElement/>
+								<text><![CDATA[Nota]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="440" y="14" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="25" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Presidente:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="36" y="11" width="200" height="1"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
